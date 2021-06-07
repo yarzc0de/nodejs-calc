@@ -1,4 +1,4 @@
-const calcFunc = require("./module/calc");
+const calcFunc = require("./module/calc"); // Memanggil Module
 const readline = require("readline-sync");
 
 (async () => {
@@ -17,16 +17,16 @@ const readline = require("readline-sync");
         let hasil = "";
         if(tipe === "1") {
             typeName = "Ditambah"
-            hasil = calcFunc.tambah(angka1, angka2);
+            hasil = calcFunc.tambah(angka1, angka2); // Menggunakan Fungsi Pertambahan pada Module
         } else if(tipe === "2") {
             typeName = "Dikurang"
-            hasil = calcFunc.kurang(angka1, angka2);
+            hasil = calcFunc.kurang(angka1, angka2);  // Menggunakan Fungsi Pengurangan pada Module
         } else if(tipe === "3") {
             typeName = "Dikali"
-            hasil = calcFunc.kali(angka1, angka2);
+            hasil = calcFunc.kali(angka1, angka2);  // Menggunakan Fungsi Perkalian pada Module
         } else if(tipe === "4") {
             typeName = "Dibagi"
-            hasil = calcFunc.bagi(angka1, angka2);
+            hasil = calcFunc.bagi(angka1, angka2);  // Menggunakan Fungsi Pembagian pada Module
         } else {
             console.log("Tipe tidak ditemukan");
         }
@@ -39,5 +39,5 @@ const readline = require("readline-sync");
         } else {
             isNext = false;
         }
-    } while(isNext);
+    } while(isNext); // Pengulangan, true = lanjut, false = berhenti.
 })();
